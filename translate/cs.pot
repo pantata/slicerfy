@@ -20,7 +20,7 @@ msgid "Auto insert: {port} ..."
 msgstr "Automatické vložení: {port} ..."
 
 msgid "Poop {i}/20"
-msgstr "Hovínko {i}/20"
+msgstr "Čištění {i}/20"
 
 msgid "The filament in the IFS ({consume}) has run out. The remaining filament has been used until it was no longer possible, but now it must be expelled through the waste chute in order to load the next one requested by the print."
 msgstr "Došel filament v IFS ({consume}). Zbývající filament byl použit, dokud to nebylo možné, ale nyní musí být vytlačen do odpadní šachty, aby se mohl nahrát další požadovaný tiskem."
@@ -212,7 +212,7 @@ msgid "Start print {extruder_temp}/{bed_temp} ..."
 msgstr "Start tisku {extruder_temp}/{bed_temp} ..."
 
 msgid "Poop"
-msgstr "Hovínko"
+msgstr "Čištění"
 
 msgid "Pooping the previous color/material from the hotend ..."
 msgstr "Čištění předchozí barvy/materiálu z hotendu ..."
