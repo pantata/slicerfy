@@ -81,5 +81,5 @@ Let's do what Flashforge didn't want to do!
 <img width="812" alt="image" src="https://github.com/user-attachments/assets/8ad8ce59-6f45-44ef-88ec-be9ecdcfb7f0" />
 
 ## Credits
-Sergei (ghzserg) [zmod](https://github.com/ghzserg/zmod)
-Raúl (function3d) [bambufy](https://github.com/function3d/bambufy
+- Sergei (ghzserg) [zmod](https://github.com/ghzserg/zmod)
+- Raúl (function3d) [bambufy](https://github.com/function3d/bambufy
