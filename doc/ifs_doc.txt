@@ -1,0 +1,39 @@
+            f"_INSERT_PRUTOK_IFS "
+            f"PRUTOK={prutok} "
+            f"TEMP={config['temp']} "
+            f"NEED_STOP={need_stop} "
+            f"TRASH={trash} "
+            f"FILAMENT_TYPE={config['filament_type']} "
+            f"FILAMENT_UNLOAD_SPEED={config['filament_unload_speed']} "
+            f"FILAMENT_LOAD_SPEED={config['filament_load_speed']} "
+            f"FILAMENT_UNLOAD_BEFORE_CUTTING={config['filament_unload_before_cutting']} "
+            f"FILAMENT_UNLOAD_AFTER_CUTTING={config['filament_unload_after_cutting']} "
+            f"FILAMENT_UNLOAD_AFTER_DROP={config['filament_unload_after_drop']} "
+            f"FILAMENT_TUBE_LENGTH={config['filament_tube_length']} "
+            f"FILAMENT_DROP_LENGTH={config['filament_drop_length']} "
+            f"FILAMENT_DROP_LENGTH_ADD={filament_drop_length_add} "
+            f"FILAMENT_FAN_SPEED={config['filament_fan_speed']} "
+            f"NOZZLE_CLEANING_LENGTH={config['nozzle_cleaning_length']} "
+
+
+[gcode_macro _INSERT_PRUTOK_IFS]
+description: Načítání filamentu IFS + Extruder
+gcode:
+    {% set temp = printer[printer.toolhead.extruder].target if printer.toolhead.extruder != '' else 0 %}
+
+    {% set prutok                          = params.PRUTOK|default(1)|int %}
+    {% set extruder_temp                   = params.TEMP|default(220)|int %}
+    {% set need_stop                       = params.NEED_STOP|default(1)|int %}
+    {% set trash                           = params.TRASH|default(0)|int %}
+
+    {% set filament_type                   = params.FILAMENT_TYPE|default("PLA")|string %}
+    {% set filament_unload_before_cutting  = params.FILAMENT_UNLOAD_BEFORE_CUTTING|default(0)|float %}
+    {% set filament_unload_after_cutting   = params.FILAMENT_UNLOAD_AFTER_CUTTING|default(5)|float %}
+    {% set filament_unload_after_drop      = params.FILAMENT_UNLOAD_AFTER_DROP|default(3)|float %}
+    {% set filament_unload_speed           = params.FILAMENT_UNLOAD_SPEED|default(600)|int %}
+    {% set filament_load_speed             = params.FILAMENT_LOAD_SPEED|default(300)|int %}
+    {% set filament_tube_length            = params.FILAMENT_TUBE_LENGTH|default(1000)|int %}
+    {% set filament_drop_length            = params.FILAMENT_DROP_LENGTH|default(90)|int %}
+    {% set filament_drop_length_add        = params.FILAMENT_DROP_LENGTH_ADD|default(0)|int %}
+    {% set filament_fan_speed              = params.FILAMENT_FAN_SPEED|default(102)|int %}
+
